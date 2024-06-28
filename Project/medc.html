@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medication Management Tool</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="medc.css">
+</head>
+
+<body style="background-image: url('medc.jpg');">
+  <div class="container">
+    <div class="left">
+      <h1>Medication Management</h1>
+      <form id="record-form">
+        <input type="text" id="medicine-name" placeholder="Medicine Name" required>
+        <input type="text" id="dosage" placeholder="Dosage" required>
+        <input type="text" id="frequency" placeholder="Frequency" name="frequency" required>
+        <button type="submit">Add Record</button>
+        <input type="hidden" id="edit-index" value="-1">
+      </form>
+    </div>
+    <div class="right">
+      <h1>Records</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Medicine Name</th>
+            <th>Dosage</th>
+            <th>Frequency</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="record-list"></tbody>
+      </table>
+    </div>
+  </div>
+  <script src="medc.js"></script>
+</body>
+
+</html>
